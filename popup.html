@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NetSnap</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <img class="brand-mark" src="icon-32.png" alt="NetSnap logo" />
+        <div>
+          <h1 class="brand-title">NetSnap</h1>
+        </div>
+      </header>
+
+      <section class="speed-card" aria-live="polite">
+        <p class="status-pill" id="status-text">Ready to run speed test</p>
+
+        <div class="dial-wrap">
+          <div class="dial" role="img" aria-label="Speed meter">
+            <div class="dial-needle-wrap" aria-hidden="true">
+              <div class="dial-needle"></div>
+              <div class="dial-needle-cap"></div>
+            </div>
+            <div class="dial-value" id="download-speed">0.00</div>
+            <div class="dial-unit">Mbps download</div>
+          </div>
+          <p class="test-timer" id="test-timer">5s timed test</p>
+        </div>
+
+        <div class="metrics-grid">
+          <article class="metric down">
+            <h2>Down</h2>
+            <p><span id="down-metric">0.00</span> Mbps</p>
+          </article>
+          <article class="metric up">
+            <h2>Up</h2>
+            <p><span id="up-metric">0.00</span> Mbps</p>
+          </article>
+          <article class="metric ping">
+            <h2>Ping</h2>
+            <p><span id="ping-metric">0</span> ms</p>
+          </article>
+        </div>
+
+        <div class="quality-card" id="quality-card">
+          <h2 id="quality-title">Connection not tested</h2>
+          <p id="quality-copy">Run a test to assess streaming, calls, gaming and upload readiness.</p>
+        </div>
+
+        <div class="actions">
+          <button id="start-btn" class="btn btn-primary" type="button">Run Speed Test</button>
+          <button id="history-btn" class="btn btn-ghost" type="button">Save Result</button>
+        </div>
+
+        <section class="ad-slot ad-slot--inline ad-slot--locked" id="inline-ad-slot" aria-live="polite">
+          <div class="ad-placeholder">Ads appear after test completes</div>
+          <article class="ad-card ad-content">
+            <span class="ad-label">Sponsored</span>
+            <h3 class="ad-title">Boost Your Internet Speed &#9889;</h3>
+            <p class="ad-copy">Upgrade your WiFi router for faster performance</p>
+            <div class="ad-actions">
+              <a class="ad-cta" href="https://www.oyorooms.com/" target="_blank" rel="noopener noreferrer">
+                Check Deals
+              </a>
+            </div>
+            <div class="adsense-placeholder" id="adsense-inline">
+              <!-- Google AdSense inline slot placeholder -->
+              <!-- Insert AdSense code here (e.g. <ins class="adsbygoogle"...>) -->
+            </div>
+          </article>
+        </section>
+      </section>
+
+      <section class="ad-slot ad-slot--footer ad-slot--locked" id="footer-ad-slot" aria-label="Sponsored banner">
+        <div class="ad-placeholder">Footer ad unlocks after speed test</div>
+        <article class="ad-banner ad-content">
+          <span class="ad-label">Sponsored</span>
+          <div class="ad-banner-body">
+            <div>
+              <p class="ad-title">Boost Your Internet Speed &#9889;</p>
+              <p class="ad-copy">Upgrade your WiFi router for faster performance</p>
+            </div>
+            <a class="ad-cta ad-cta--small" href="https://ads.google.com/" target="_blank" rel="noopener noreferrer">
+              Check Deals
+            </a>
+          </div>
+          <div class="adsense-placeholder adsense-placeholder--footer" id="adsense-footer">
+            <!-- Google AdSense footer slot placeholder -->
+            <!-- Insert AdSense code here (e.g. <ins class="adsbygoogle"...>) -->
+            <!-- Add (adsbygoogle = window.adsbygoogle || []).push({}); after insertion -->
+          </div>
+        </article>
+      </section>
+
+      <section class="ads-script-note" aria-hidden="true">
+        <!-- Optional: Add AdSense script in extension-safe way if policy allows -->
+        <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?..."></script> -->
+      </section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

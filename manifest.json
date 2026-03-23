@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "NetSnap: Speed Test & Internet Connection Monitor",
+  "description": "Measure download/upload speed, ping, and monitor internet connection quality in real time.",
+  "version": "2.0.0",
+  "icons": {
+    "16": "icon-16.png",
+    "32": "icon-32.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://speed.cloudflare.com/*",
+    "https://www.gstatic.com/*",
+    "https://www.google.com/*"
+  ],
+  "action": {
+    "default_title": "NetSnap",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon-16.png",
+      "32": "icon-32.png",
+      "48": "icon-48.png",
+      "128": "icon-128.png"
+    }
+  }
+}
